@@ -1,0 +1,15 @@
+replicaCount: 1
+
+image:
+  repository: agpv/demo-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 8080
+  nodePort: 30080
+
+app:
+  name: demo-app2
+  contextPath: /demo
